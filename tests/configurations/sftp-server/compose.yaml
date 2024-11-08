@@ -1,0 +1,13 @@
+services:
+  sftp:
+    image: sftp-server
+    volumes:
+      - /Users/leo/tmp:/home/user1
+      - /Users/leo/tmp:/home/user2
+      - /Users/leo/tmp:/home/user3
+    ports:
+      - "2222:22"
+    command:
+      - user1:pwd123:1001
+      - user2:pwd123:1001
+      - user3:pwd123:1001

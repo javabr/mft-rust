@@ -1,0 +1,12 @@
+[package]
+name = "jobexecutor"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+ssh2 = "0.9.4"
+models = { path="../models" }
+connectors = { path="../connectors" }
+settings = { path="../settings" }
+
+

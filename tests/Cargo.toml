@@ -1,0 +1,24 @@
+[package]
+name = "tests"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tokio = { version = "1", features = ["full"], optional = true }
+thiserror = "1"
+uuid = { version = "1.10.0", features = ["serde", "v4"] }
+chrono = { version = "0.4.38", features = ["serde"] }
+ssh2 = "0.9.4"
+secrecy = { version = "0.8", features = ["serde"] }
+serde-aux = "4"
+
+models = { path="../models" }
+connectors = { path="../connectors" }
+settings = { path="../settings" }
+
+[features]
+default = ["core"]
+core = ["dep:tokio"]
+

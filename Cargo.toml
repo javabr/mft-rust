@@ -1,0 +1,10 @@
+
+[workspace]
+members = [
+  "models",
+  "connectors",
+  "jobexecutor",
+  "settings",
+  "tests",
+  "sftp-server",
+]
